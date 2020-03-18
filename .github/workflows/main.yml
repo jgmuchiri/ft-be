@@ -11,11 +11,8 @@ jobs:
           node-version: '12'
       - run: npm install
       - run: sudo npm install -g knex
-      - run: knex migrate:latest --env test
-      - run: knex seed:run --env test
       - uses: paambaati/codeclimate-action@v2.4.0
         env:
-          NODE_ENV: 'test'
           CC_TEST_REPORTER_ID: ${{ secrets.CodeClimateReporterId }}
           HOSTNAME_TEST: ${{ secrets.HOSTNAME_TEST }},
           USERNAME_TEST: ${{ secrets.USERNAME_TEST }},
