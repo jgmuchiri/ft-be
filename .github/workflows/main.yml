@@ -14,11 +14,11 @@ jobs:
       - uses: paambaati/codeclimate-action@v2.4.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CodeClimateReporterId }}
-          HOSTNAME_TEST: ${{ secrets.HOSTNAME_TEST }},
-          USERNAME_TEST: ${{ secrets.USERNAME_TEST }},
-          PASSWORD_TEST: ${{ secrets.PASSWORD_TEST }},
-          PORT_TEST: ${{ secrets.PORT_TEST }},
-          NAME_TEST: ${{ secrets.NAME_TEST }},
+          HOSTNAME_TEST: ${{ secrets.HOSTNAME_TEST }}
+          USERNAME_TEST: ${{ secrets.USERNAME_TEST }}
+          PASSWORD_TEST: ${{ secrets.PASSWORD_TEST }}
+          PORT_TEST: ${{ secrets.PORT_TEST }}
+          NAME_TEST: ${{ secrets.NAME_TEST }}
           DATABASE_URL:  ${{ secrets.DATABASE_URL }}
         with:
           coverageCommand: npm run coverage
